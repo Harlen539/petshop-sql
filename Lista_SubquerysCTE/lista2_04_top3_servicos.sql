@@ -1,4 +1,9 @@
-WITH Total AS (
+-- =====================================
+-- LISTA 2 - EXERCÍCIO 4
+-- TOP 3 SERVIÇOS MAIS AGENDADOS
+-- =====================================
+
+WITH TotalAgendamentos AS (
     SELECT 
         s.nome,
         COUNT(a.id) AS total
@@ -8,6 +13,6 @@ WITH Total AS (
 )
 
 SELECT *
-FROM Total
+FROM TotalAgendamentos
 ORDER BY total DESC
 LIMIT 3;
