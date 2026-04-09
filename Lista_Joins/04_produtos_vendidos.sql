@@ -1,8 +1,3 @@
--- =====================================
--- 4. PRODUTOS + TOTAL VENDIDO
--- LEFT JOIN (inclui produtos sem venda)
--- =====================================
-
 SELECT 
     p.nome,
     COALESCE(SUM(iv.quantidade), 0) AS total_vendido
